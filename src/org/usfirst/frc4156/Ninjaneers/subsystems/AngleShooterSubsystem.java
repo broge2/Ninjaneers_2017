@@ -26,14 +26,14 @@ public class AngleShooterSubsystem extends Subsystem {
     
 
     public void adjustAngle(Joystick controller){    	
-//    	double leftTrigger = controller.getRawAxis(XBoxControllerMap.LT);
-//    	double rightTrigger = controller.getRawAxis(XBoxControllerMap.RT);
-//    	if(leftTrigger > -0.05){
-//    		angleMotor.set(leftTrigger * 0.3);
-//    	} else if(rightTrigger > -0.05){
-//    		angleMotor.set(rightTrigger * 0.3);
-//    	}
-    	angleMotor.set(controller.getRawAxis(XBoxControllerMap.LT));
+    	double leftTrigger = controller.getRawAxis(XBoxControllerMap.LT);
+    	double rightTrigger = controller.getRawAxis(XBoxControllerMap.RT);
+    	if(leftTrigger > 0){
+    		angleMotor.set(leftTrigger * 0.9);
+    	} else if(rightTrigger > 0){
+    		angleMotor.set(rightTrigger * -0.9);
+    	}
+//    	angleMotor.set(controller.getRawAxis(XBoxControllerMap.LT));
     }
     
     public void stopAdjusting(){

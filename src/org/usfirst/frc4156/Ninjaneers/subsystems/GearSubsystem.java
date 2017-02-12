@@ -12,7 +12,7 @@
 package org.usfirst.frc4156.Ninjaneers.subsystems;
 
 import org.usfirst.frc4156.Ninjaneers.RobotMap;
-import org.usfirst.frc4156.Ninjaneers.commands.ReleaseGear;
+import org.usfirst.frc4156.Ninjaneers.commands.ControlGear;
 
 import com.ctre.CANTalon;
 
@@ -52,7 +52,7 @@ public class GearSubsystem extends Subsystem {
     }
     
     public void raise(){
-    	gearReleaseMotor.set(0.5);
+    	gearReleaseMotor.set(-0.5);
     }
     
     public void stop(){
