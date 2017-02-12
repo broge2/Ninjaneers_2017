@@ -12,7 +12,6 @@
 package org.usfirst.frc4156.Ninjaneers.subsystems;
 
 import org.usfirst.frc4156.Ninjaneers.RobotMap;
-import org.usfirst.frc4156.Ninjaneers.commands.ControlGear;
 
 import com.ctre.CANTalon;
 

@@ -12,11 +12,9 @@
 package org.usfirst.frc4156.Ninjaneers.subsystems;
 
 import org.usfirst.frc4156.Ninjaneers.RobotMap;
-import org.usfirst.frc4156.Ninjaneers.XBoxControllerMap;
 
 import com.ctre.CANTalon;
 
-import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.command.Subsystem;
 
