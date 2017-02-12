@@ -12,7 +12,7 @@ public class AdjustShootingAngle extends Command {
     public AdjustShootingAngle() {
         // Use requires() here to declare subsystem dependencies
         // eg. requires(chassis);
-    	requires(Robot.shootingSubSystem);
+    	requires(Robot.angleShooterSubsystem);
     }
 
     // Called just before this Command runs the first time
@@ -21,7 +21,7 @@ public class AdjustShootingAngle extends Command {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-    	Robot.shootingSubSystem.adjustAngle(Robot.oi.getXBOXController());
+    	Robot.angleShooterSubsystem.adjustAngle(Robot.oi.getXBOXController());
     }
 
     // Make this return true when this Command no longer needs to run execute()
@@ -31,7 +31,7 @@ public class AdjustShootingAngle extends Command {
 
     // Called once after isFinished returns true
     protected void end() {
-    	Robot.shootingSubSystem.stopAdjusting();
+    	Robot.angleShooterSubsystem.stopAdjusting();
     }
 
     // Called when another command which requires one or more of the same

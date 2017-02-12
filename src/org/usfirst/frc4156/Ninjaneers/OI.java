@@ -72,8 +72,8 @@ public class OI {
         
         climbRopeUpButton = new JoystickButton(xBOXController, XBoxControllerMap.LB);
         climbRopeUpButton.whileHeld(new ClimbRope("up"));
-        climbRopeDownButton = new JoystickButton(xBOXController, XBoxControllerMap.RB);
-        climbRopeDownButton.whileHeld(new ClimbRope("down"));
+//        climbRopeDownButton = new JoystickButton(xBOXController, XBoxControllerMap.RB);
+//        climbRopeDownButton.whileHeld(new ClimbRope("down"));
         gearDropButton = new JoystickButton(xBOXController, XBoxControllerMap.X);
         gearDropButton.whileHeld(new ReleaseGear());
         feedButton = new JoystickButton(xBOXController, XBoxControllerMap.B);
