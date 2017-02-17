@@ -48,6 +48,7 @@ public class ShootingSubSystem extends Subsystem {
         // setDefaultCommand(new MySpecialCommand());
     }
     
+        
     
     public void shoot(){
     	shooterMotor.set(-.9);
