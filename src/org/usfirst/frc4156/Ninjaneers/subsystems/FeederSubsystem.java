@@ -47,7 +47,7 @@ public class FeederSubsystem extends Subsystem {
     }
     
     public void feedMe(){
-    	feederMotorControl.set(0.3);
+    	feederMotorControl.set(0.6);
     }
     
     public void stop(){

@@ -79,7 +79,7 @@ public class OI {
         gearDropButton.whileHeld(new ControlGear("drop"));
         gearRaiseButton = new JoystickButton(xBOXController, XBoxControllerMap.Y);
         gearRaiseButton.whileHeld(new ControlGear("raise"));
-        feedButton = new JoystickButton(xBOXController, XBoxControllerMap.B);
+        feedButton = new JoystickButton(xBOXController, XBoxControllerMap.RB);
         feedButton.whileHeld(new FeedBalls());
         shootButton = new JoystickButton(xBOXController, XBoxControllerMap.A);
         shootButton.whileHeld(new ShootBalls());

@@ -1,5 +1,6 @@
 package org.usfirst.frc4156.Ninjaneers.subsystems;
 
+import org.usfirst.frc4156.Ninjaneers.Robot;
 import org.usfirst.frc4156.Ninjaneers.RobotMap;
 import org.usfirst.frc4156.Ninjaneers.XBoxControllerMap;
 import org.usfirst.frc4156.Ninjaneers.commands.AdjustShootingAngle;
@@ -16,29 +17,17 @@ import edu.wpi.first.wpilibj.command.Subsystem;
 public class AngleShooterSubsystem extends Subsystem {
 
     private final CANTalon angleMotor = RobotMap.shootingSubSystemAngleMotor;
-    private final DigitalInput limitSwitch = new DigitalInput(0);
     // Put methods for controlling this subsystem
     // here. Call these from Commands.
 
     public void initDefaultCommand() {
         // Set the default command for a subsystem here.
         //setDefaultCommand(new MySpecialCommand());
-    	setDefaultCommand(new AdjustShootingAngle());
+    	setDefaultCommand(new AdjustShootingAngle(Robot.oi.getXBOXController()));
     }
     
-
-    public boolean isSwitchPressed(){
-    	return limitSwitch.get();
-    }
-    
-    public void adjustAngle(Joystick controller){    	
-    	double leftTrigger = controller.getRawAxis(XBoxControllerMap.LT);
-    	double rightTrigger = controller.getRawAxis(XBoxControllerMap.RT);
-    	if(leftTrigger > 0){
-    		angleMotor.set(leftTrigger * 0.9);
-    	} else if(rightTrigger > 0){
-    		angleMotor.set(rightTrigger * -0.9);
-    	}
+    public void adjustAngle(double velocity){  
+    	angleMotor.set(velocity);
     }
     
     public void stopAdjusting(){

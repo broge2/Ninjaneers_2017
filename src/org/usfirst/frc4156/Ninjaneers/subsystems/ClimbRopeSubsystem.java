@@ -46,7 +46,7 @@ public class ClimbRopeSubsystem extends Subsystem {
     }
     
     public void climb(int direction){
-    	ropeClimbController.set(-0.3 * direction);
+    	ropeClimbController.set(1.0 * direction);
     }
     
     public void stop(){
